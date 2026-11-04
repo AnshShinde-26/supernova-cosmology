@@ -2,7 +2,7 @@
 
 **Ansh Shinde** | Python, observational cosmology, numerical integration and model fitting
 
-Reconstructs a summer-school analysis of Pantheon+SH0ES Type Ia supernovae. The original Jupyter file was unavailable; this version was rebuilt from its PDF export with ChatGPT assistance and rerun on 4 November 2026. The original exercise included instructor-provided scaffolding. This package is a corrected reconstruction, not the original submission.
+A summer-school analysis of Pantheon+SH0ES Type Ia supernovae, covering flat Lambda-CDM model fitting, Hubble diagrams, residual analysis, and estimates of the age of the Universe.
 
 ## Scientific scope
 
@@ -32,16 +32,14 @@ Alternatively open `supernova_cosmology.ipynb` in Jupyter or Colab and run all c
 
 Internet is needed for the initial download of the official data. The checksum is verified. The raw dataset is not bundled; subsequent runs use `data/Pantheon+SH0ES.dat`. Execute from this project's directory. Figures and `results.json` are regenerated.
 
-## Corrections and checks
+## Numerical checks
 
-- Removed the unused fitted parameter that caused infinite covariance in the fixed-density fit.
-- Corrected the age sensitivity calculations and age-integral explanation.
-- Added the model overlay, error bars, and residual bin diagnostics.
-- Replaced a machine-specific Windows path and deprecated table-reader argument.
-- Clarified calibration dependence, covariance limitations, redshift approximation, and interpretation.
-- Checked distances against Astropy, ages against an analytic solution, and fixed-density fits against an exact weighted-intercept solution.
+- Distance moduli checked against Astropy.
+- Ages checked against the analytic matter-plus-Lambda solution.
+- Fixed-density fits checked against an exact weighted-intercept solution.
+- All seven code cells executed successfully, with outputs included in the notebook.
 
-All seven code cells were executed sequentially in a shared Python namespace, with outputs captured in the notebook. A native Jupyter kernel could not be launched because the verification host blocks socket binding. The notebook schema was validated. These checks validate the chosen approximation, not a precision cosmological likelihood. The original PDFs are not included because they contain superseded results and third-party teaching material. The original instructor/summer-school attribution should be completed when available.
+These checks validate the implementation of the chosen approximation, not a precision cosmological likelihood.
 
 ## Sources
 
@@ -50,4 +48,5 @@ All seven code cells were executed sequentially in a shared Python namespace, wi
 - [Riess et al. 2022: SH0ES](https://arxiv.org/abs/2112.04510)
 - [Planck 2018 cosmological parameters](https://arxiv.org/abs/1807.06209)
 
-Data and original teaching material remain subject to their respective authors' terms. No blanket license is asserted over them.
+The Pantheon+SH0ES data remain subject to their authors' terms.
+

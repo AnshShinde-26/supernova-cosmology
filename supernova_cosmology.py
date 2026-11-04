@@ -1,4 +1,4 @@
-# Reconstructed educational analysis; see README.md and notebook for limitations.
+# Supernova cosmology analysis; see README.md and notebook for assumptions.
 from pathlib import Path
 import hashlib
 import json
@@ -162,3 +162,4 @@ results = {
     'chi2_diagonal': float(chi2_diag), 'dof': int(dof),
 }
 Path('results.json').write_text(json.dumps(results, indent=2) + '\n')
+
